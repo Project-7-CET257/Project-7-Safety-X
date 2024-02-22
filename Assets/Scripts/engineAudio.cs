@@ -36,11 +36,19 @@ public class engineAudio : MonoBehaviour
     private bool m_StartedSound;
 
     [HideInInspector]public float totalPower;
-    [HideInInspector]public float engineRPM;
-    [HideInInspector]public float maxRPM;
+    public float engineRPM;
+    [HideInInspector]public float maxRPM = 1f;
     [HideInInspector]public bool engineLerp;
 
+    private NewCarController carController;
     private GameObject audioObject;
+
+    private void Awake()
+    {
+        carController = GetComponent<NewCarController>();
+        //engineRPM = 0f;
+        StartSound();
+    }
 
     private void StartSound()
     {
@@ -77,6 +85,8 @@ public class engineAudio : MonoBehaviour
 
     private void Update()
     {
+        engineRPM = carController.Revs;
+
         float camDist = (Camera.main.transform.position - transform.position).sqrMagnitude;
                     
         accFade = Mathf.Lerp(accFade,Mathf.Abs( acceleration ), 20 * Time.deltaTime);

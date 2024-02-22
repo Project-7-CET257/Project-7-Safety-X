@@ -12,11 +12,17 @@ public class ForkController : MonoBehaviour {
     public Vector3 minYmast; //The minimum height of the mast
 
     private bool mastMoveTrue = false; //Activate or deactivate the movement of the mast
+    private inputManager IM;
+
+    private void Awake()
+    {
+        IM = GetComponent<inputManager>();
+    }
 
     // Update is called once per frame
     void FixedUpdate () {
 
-        Debug.Log(mastMoveTrue);
+        //Debug.Log(mastMoveTrue);
         if(fork.transform.localPosition.y >= maxYmast.y && fork.transform.localPosition.y < maxY.y)
         {
             mastMoveTrue = true;
@@ -32,7 +38,7 @@ public class ForkController : MonoBehaviour {
             mastMoveTrue = false;
         }
       
-        if (Input.GetKey(KeyCode.PageUp))
+        if (IM.forkliftUp)
         {
            //fork.Translate(Vector3.up * speedTranslate * Time.deltaTime);
             fork.transform.localPosition = Vector3.MoveTowards(fork.transform.localPosition, maxY, speedTranslate * Time.deltaTime);
@@ -42,7 +48,7 @@ public class ForkController : MonoBehaviour {
             }
           
         }
-        if (Input.GetKey(KeyCode.PageDown))
+        if (IM.forkliftDown)
         {
             fork.transform.localPosition = Vector3.MoveTowards(fork.transform.localPosition, minY, speedTranslate * Time.deltaTime);
 

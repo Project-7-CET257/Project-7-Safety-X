@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 
-
     internal enum CarDriveType
     {
         FrontWheelDrive,
@@ -26,9 +25,9 @@ internal enum SpeedType
     public class NewCarController : MonoBehaviour
     {
         [SerializeField] private int colWheels; //the number of wheels that can rotate, can be used for the trailer
-       // [SerializeField] private bool FrontSteerWheels = true; //the rotation of the front or rear wheels, made for a forklift truck
-    [SerializeField] private CarSteerType m_CarSteerType = CarSteerType.FrontSteerWheels; //the rotation of the front or rear wheels or FourSteerWheels, made for a forklift truck, a TelehandlerForklift
-    [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
+        //[SerializeField] private bool FrontSteerWheels = true; //the rotation of the front or rear wheels, made for a forklift truck
+        [SerializeField] private CarSteerType m_CarSteerType = CarSteerType.FrontSteerWheels; //the rotation of the front or rear wheels or FourSteerWheels, made for a forklift truck, a TelehandlerForklift
+        [SerializeField] private CarDriveType m_CarDriveType = CarDriveType.FourWheelDrive;
         [SerializeField] private WheelCollider[] m_WheelColliders = new WheelCollider[4];
         [SerializeField] private GameObject[] m_WheelMeshes = new GameObject[4];
         [SerializeField] private Vector3 m_CentreOfMassOffset;
@@ -359,4 +358,3 @@ internal enum SpeedType
 
        
     }
-
