@@ -12,11 +12,11 @@ public class ForkController : MonoBehaviour {
     public Vector3 minYmast; //The minimum height of the mast
 
     private bool mastMoveTrue = false; //Activate or deactivate the movement of the mast
-    private inputManager IM;
+    private InputManager IM;
 
     private void Awake()
     {
-        IM = GetComponent<inputManager>();
+        IM = GetComponent<InputManager>();
     }
 
     // Update is called once per frame

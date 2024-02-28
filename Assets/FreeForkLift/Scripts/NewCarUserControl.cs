@@ -2,18 +2,18 @@ using System;
 using UnityEngine;
 
 [RequireComponent(typeof(NewCarController))]
-[RequireComponent(typeof(inputManager))]
+[RequireComponent(typeof(InputManager))]
 
 public class NewCarUserControl : MonoBehaviour
 {
     private NewCarController m_Car; // the car controller we want to use
-    private inputManager IM;
+    private InputManager IM;
 
     private void Awake()
     {
         // get the car controller
         m_Car = GetComponent<NewCarController>();
-        IM = GetComponent<inputManager>();
+        IM = GetComponent<InputManager>();
     }
 
 
