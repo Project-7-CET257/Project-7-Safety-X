@@ -1,4 +1,26 @@
-+ Add camera position switching
-+ Build warehouse environment
-+ Link main hub to minigame scenes
-+ Fix engine audio
+Key:
+x Not Started
+~ Ongoing
+^ Completed
+
+--------------------
+
+^ Add camera position switching
+
+x Build warehouse environment
+
+x Link main hub to minigame scenes
+
+^ Fix engine audio
+
+~ Fix pallette stacking
+
+x Add pause menu
+
+x Add forklift UI (speedometer, fork raise %)
+
+x Add background audio
+
+x Add goal + goal pointer
+
+x Animate steering wheel
