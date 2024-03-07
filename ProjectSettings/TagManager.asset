@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Vehicle
   - Ground
+  - Pallet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Liftables
   - Water
   - UI
   - 

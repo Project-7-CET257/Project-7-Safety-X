@@ -10,7 +10,8 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public bool forkliftUp;
     [HideInInspector] public bool forkliftDown;
     [HideInInspector] public bool pausePress;
-    [HideInInspector] public bool cameraSwitch;
+    [HideInInspector] public bool cameraSwitchUp;
+    [HideInInspector] public bool cameraSwitchDown;
 
     public void OnVertical(InputValue value) => vertical = value.Get<Vector2>().y;
     public void OnHorizontal(InputValue value) => horizontal = value.Get<Vector2>().x;
@@ -18,5 +19,6 @@ public class InputManager : MonoBehaviour
     public void OnForkliftUp(InputValue value) => forkliftUp = Convert.ToBoolean(value.Get<float>());
     public void OnForkliftDown(InputValue value) => forkliftDown = Convert.ToBoolean(value.Get<float>());
     public void OnPausePress(InputValue value) => pausePress = Convert.ToBoolean(value.Get<float>());
-    public void OnCameraSwitch(InputValue value) => cameraSwitch = Convert.ToBoolean(value.Get<float>());
+    public void OnCameraSwitchUp(InputValue value) => cameraSwitchUp = Convert.ToBoolean(value.Get<float>());
+    public void OnCameraSwitchDown(InputValue value) => cameraSwitchDown = Convert.ToBoolean(value.Get<float>());
 }

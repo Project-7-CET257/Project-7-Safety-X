@@ -51,9 +51,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "CameraSwitch",
+                    "name": "CameraSwitchUp",
                     "type": "Value",
                     "id": "315ba5dc-afd5-42fc-8680-d09f23522976",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CameraSwitchDown",
+                    "type": "Value",
+                    "id": "cb49e152-f2d1-4a54-aa54-1c5af2ee71ab",
                     "expectedControlType": "Analog",
                     "processors": "",
                     "interactions": "",
@@ -87,39 +96,6 @@
                     "name": "right",
                     "id": "1aed768e-1353-4483-9ea9-6e09aef01955",
                     "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Arrows",
-                    "id": "c7843b8d-f091-4bd8-812d-fff873f9637d",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Horizontal",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "left",
-                    "id": "8cc4187c-c3fb-4877-afe0-0375ecc9fa9f",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "40be3daf-cef0-4a01-ad63-14cc05620802",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -186,39 +162,6 @@
                     "name": "down",
                     "id": "081fc828-e867-42ef-8e4a-a653d51cd0cc",
                     "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Vertical",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Arrows",
-                    "id": "b3dd46a5-c981-4c0b-9d9b-727ae26d061d",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Vertical",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "2a92bac3-2ab5-424f-b86b-8ea0254f7975",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Vertical",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "cdddd8fc-643a-47f9-9cad-cf0502c312b3",
-                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
@@ -328,11 +271,11 @@
                 {
                     "name": "",
                     "id": "7399ce37-0390-420e-9e4c-31b59fea1a21",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "CameraSwitch",
+                    "action": "CameraSwitchUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -343,7 +286,29 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "CameraSwitch",
+                    "action": "CameraSwitchUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "27379c3b-6c64-41ca-9aa8-d932af5187be",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "CameraSwitchDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68c15ca7-5d83-4a26-bfa9-d34e94748c89",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CameraSwitchDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

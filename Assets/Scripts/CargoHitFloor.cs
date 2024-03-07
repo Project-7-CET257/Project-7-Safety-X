@@ -8,6 +8,7 @@ public class CargoHitFloor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            new WaitForSeconds(1);
             gameOverScreen.SetActive(true);
             Time.timeScale = 0;
         }

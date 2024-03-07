@@ -17,14 +17,19 @@ public class CameraSwitch : MonoBehaviour
 
     void Update()
     {
-        if (IM.cameraSwitch && Time.time >= nextSwitch)
+        if (IM.cameraSwitchUp && Time.time >= nextSwitch)
         {
             nextSwitch = Time.time + 1f / changeRate;
-            ChangePerspective();
+            ChangePerspectiveUp();
+        }
+        if (IM.cameraSwitchDown && Time.time >= nextSwitch)
+        {
+            nextSwitch = Time.time + 1f / changeRate;
+            ChangePerspectiveDown();
         }
     }
 
-    private void ChangePerspective()
+    private void ChangePerspectiveUp()
     {
         if (VCamFP.activeSelf)
         {
@@ -43,6 +48,28 @@ public class CameraSwitch : MonoBehaviour
             VCamTP.SetActive(false);
             VCamBV.SetActive(false);
             VCamFP.SetActive(true);
+        }
+    }
+
+    private void ChangePerspectiveDown()
+    {
+        if (VCamFP.activeSelf)
+        {
+            VCamTP.SetActive(false);
+            VCamBV.SetActive(true);
+            VCamFP.SetActive(false);
+        }
+        else if (VCamTP.activeSelf)
+        {
+            VCamTP.SetActive(false);
+            VCamBV.SetActive(false);
+            VCamFP.SetActive(true);
+        }
+        else if (VCamBV.activeSelf)
+        {
+            VCamTP.SetActive(true);
+            VCamBV.SetActive(false);
+            VCamFP.SetActive(false);
         }
     }
 }
