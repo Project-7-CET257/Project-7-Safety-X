@@ -2,7 +2,7 @@
     "name": "Forklift Inputs",
     "maps": [
         {
-            "name": "New action map",
+            "name": "PlayerForklift",
             "id": "b37c6a9c-9060-4f6f-a448-3fd7e8d7eaac",
             "actions": [
                 {
@@ -63,6 +63,15 @@
                     "name": "CameraSwitchDown",
                     "type": "Value",
                     "id": "cb49e152-f2d1-4a54-aa54-1c5af2ee71ab",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "PlayerCancel",
+                    "type": "Value",
+                    "id": "b79bdf01-4443-4215-9da2-0afe843d504d",
                     "expectedControlType": "Analog",
                     "processors": "",
                     "interactions": "",
@@ -309,6 +318,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "CameraSwitchDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f32b7f96-6bb8-452e-a4d9-2cdafb8e8dca",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PlayerCancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0d24b59d-3062-416c-91fe-298a6cddcd70",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PlayerCancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

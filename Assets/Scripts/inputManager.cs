@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     [HideInInspector] public bool pausePress;
     [HideInInspector] public bool cameraSwitchUp;
     [HideInInspector] public bool cameraSwitchDown;
+    [HideInInspector] public bool cancel;
 
     public void OnVertical(InputValue value) => vertical = value.Get<Vector2>().y;
     public void OnHorizontal(InputValue value) => horizontal = value.Get<Vector2>().x;
@@ -21,4 +22,5 @@ public class InputManager : MonoBehaviour
     public void OnPausePress(InputValue value) => pausePress = Convert.ToBoolean(value.Get<float>());
     public void OnCameraSwitchUp(InputValue value) => cameraSwitchUp = Convert.ToBoolean(value.Get<float>());
     public void OnCameraSwitchDown(InputValue value) => cameraSwitchDown = Convert.ToBoolean(value.Get<float>());
+    public void OnPlayerCancel(InputValue value) => cancel = Convert.ToBoolean(value.Get<float>());
 }

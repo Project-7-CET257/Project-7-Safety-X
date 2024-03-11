@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PalletInGoal : MonoBehaviour
 {
-    [SerializeField] private GameObject gameWinScreen;
+    [SerializeField] private GameObject restartButton;
+    [SerializeField] private MenuWinController winController;
+    [SerializeField] private AudioSource forkliftEngine;
 
-     public int totalPallets, palletCheck = 0;
+    private bool isGameWon = false;
+    private int totalPallets, palletCheck = 0;
 
     private void Start()
     {
@@ -13,17 +17,29 @@ public class PalletInGoal : MonoBehaviour
 
     private void Update()
     {
-        if (palletCheck == totalPallets)
+        GameWinCheck();
+    }
+
+    private void GameWinCheck()
+    {
+        if (palletCheck == totalPallets && !isGameWon)
         {
-            gameWinScreen.SetActive(true);
+            forkliftEngine.Stop();
+            winController.winMenuPanel.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(restartButton);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            isGameWon = true;
             Time.timeScale = 0;
         }
     }
-    private void OnTriggerEnter(Collider collision)
+
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Pallet")
         {
             palletCheck++;
+            collision.gameObject.tag = "Collected Pallet";
         }
     }
 }

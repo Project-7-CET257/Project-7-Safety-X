@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ForkController : MonoBehaviour {
-
     public Transform fork; 
     public Transform mast;
     public float speedTranslate; //Platform travel speed
@@ -12,7 +10,9 @@ public class ForkController : MonoBehaviour {
     public Vector3 minYmast; //The minimum height of the mast
 
     private bool mastMoveTrue = false; //Activate or deactivate the movement of the mast
+
     private InputManager IM;
+    [SerializeField] private ForkBottomCollision ForkBottomCollision;
 
     private void Awake()
     {
@@ -30,7 +30,6 @@ public class ForkController : MonoBehaviour {
         else
         {
             mastMoveTrue = false;
-
         }
 
         if (fork.transform.localPosition.y <= maxYmast.y)
@@ -45,10 +44,10 @@ public class ForkController : MonoBehaviour {
             if(mastMoveTrue)
             {
                 mast.transform.localPosition = Vector3.MoveTowards(mast.transform.localPosition, maxYmast, speedTranslate * Time.deltaTime);
-            }
-          
+            }         
         }
-        if (IM.forkliftDown)
+
+        if (IM.forkliftDown && !ForkBottomCollision.bottomCollision)
         {
             fork.transform.localPosition = Vector3.MoveTowards(fork.transform.localPosition, minY, speedTranslate * Time.deltaTime);
 
@@ -57,8 +56,6 @@ public class ForkController : MonoBehaviour {
                 mast.transform.localPosition = Vector3.MoveTowards(mast.transform.localPosition, minYmast, speedTranslate * Time.deltaTime);
 
             }
-
         }
-
     }
 }
