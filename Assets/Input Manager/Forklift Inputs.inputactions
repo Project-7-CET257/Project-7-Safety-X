@@ -69,6 +69,24 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "CameraSwitchLeft",
+                    "type": "Value",
+                    "id": "f250483a-d7e3-4394-95f7-a512a7bfd829",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CameraSwitchRight",
+                    "type": "Value",
+                    "id": "462373cf-cfac-4caa-b099-d0a067641a18",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "PlayerCancel",
                     "type": "Value",
                     "id": "b79bdf01-4443-4215-9da2-0afe843d504d",
@@ -340,6 +358,50 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "PlayerCancel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "237536fc-4eeb-4f66-9c7e-44a7796afd94",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "CameraSwitchLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ab7e8ab6-6c97-4267-8053-acc63b7ac7b1",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CameraSwitchLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b1b42a74-af3a-4416-9477-cfac1137a953",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "CameraSwitchRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa61fb05-e078-4dfc-a0bd-a6dd26e9ad60",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "CameraSwitchRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

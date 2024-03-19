@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class CameraSwitch : MonoBehaviour
 {   
-    [SerializeField] private GameObject VCamFP;
-    [SerializeField] private GameObject VCamTP;
-    [SerializeField] private GameObject VCamBV;
+    [SerializeField] private GameObject VCamFrontView;
+    [SerializeField] private GameObject VCamLeftView;
+    [SerializeField] private GameObject VCamRightView;
+    [SerializeField] private GameObject VCamReverseView;
     [SerializeField] private float changeRate;
 
     private InputManager IM;
@@ -27,49 +28,73 @@ public class CameraSwitch : MonoBehaviour
             nextSwitch = Time.time + 1f / changeRate;
             ChangePerspectiveDown();
         }
+        if (IM.cameraSwitchLeft && Time.time >= nextSwitch)
+        {
+            nextSwitch = Time.time + 1f / changeRate;
+            ChangePerspectiveLeft();
+        }
+        if (IM.cameraSwitchRight && Time.time >= nextSwitch)
+        {
+            nextSwitch = Time.time + 1f / changeRate;
+            ChangePerspectiveRight();
+        }
     }
 
     private void ChangePerspectiveUp()
     {
-        if (VCamFP.activeSelf)
+        if (VCamReverseView.activeSelf)
         {
-            VCamTP.SetActive(true);
-            VCamBV.SetActive(false);
-            VCamFP.SetActive(false);
-        }
-        else if (VCamTP.activeSelf)
-        {
-            VCamTP.SetActive(false);
-            VCamBV.SetActive(true);
-            VCamFP.SetActive(false);
-        }
-        else if (VCamBV.activeSelf)
-        {
-            VCamTP.SetActive(false);
-            VCamBV.SetActive(false);
-            VCamFP.SetActive(true);
+            VCamLeftView.SetActive(false);
+            VCamRightView.SetActive(false);
+            VCamReverseView.SetActive(false);
+            VCamFrontView.SetActive(true);
         }
     }
 
     private void ChangePerspectiveDown()
     {
-        if (VCamFP.activeSelf)
+        if (VCamFrontView.activeSelf)
         {
-            VCamTP.SetActive(false);
-            VCamBV.SetActive(true);
-            VCamFP.SetActive(false);
+            VCamLeftView.SetActive(false);
+            VCamRightView.SetActive(false);
+            VCamFrontView.SetActive(false);
+            VCamReverseView.SetActive(true);
         }
-        else if (VCamTP.activeSelf)
+    }
+
+    private void ChangePerspectiveLeft()
+    {
+        if (VCamRightView.activeSelf)
         {
-            VCamTP.SetActive(false);
-            VCamBV.SetActive(false);
-            VCamFP.SetActive(true);
+            VCamLeftView.SetActive(false);
+            VCamRightView.SetActive(false);
+            VCamFrontView.SetActive(true);
+            VCamReverseView.SetActive(false);
         }
-        else if (VCamBV.activeSelf)
+        else if (VCamFrontView.activeSelf)
         {
-            VCamTP.SetActive(true);
-            VCamBV.SetActive(false);
-            VCamFP.SetActive(false);
+            VCamLeftView.SetActive(true);
+            VCamRightView.SetActive(false);
+            VCamFrontView.SetActive(false);
+            VCamReverseView.SetActive(false);
+        }
+    }
+
+    private void ChangePerspectiveRight()
+    {
+        if (VCamFrontView.activeSelf)
+        {
+            VCamLeftView.SetActive(false);
+            VCamRightView.SetActive(true);
+            VCamFrontView.SetActive(false);
+            VCamReverseView.SetActive(false);
+        }
+        else if (VCamLeftView.activeSelf)
+        {
+            VCamLeftView.SetActive(false);
+            VCamRightView.SetActive(false);
+            VCamFrontView.SetActive(true);
+            VCamReverseView.SetActive(false);
         }
     }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Pallet
   - Collected Pallet
+  - Pallet In Transport
   layers:
   - Default
   - TransparentFX

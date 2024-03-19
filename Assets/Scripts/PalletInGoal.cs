@@ -34,9 +34,9 @@ public class PalletInGoal : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag == "Pallet")
+        if (collision.gameObject.CompareTag("Pallet"))
         {
             palletCheck++;
             collision.gameObject.tag = "Collected Pallet";
