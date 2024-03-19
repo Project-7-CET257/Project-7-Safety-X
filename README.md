@@ -1,39 +1,39 @@
-# Project-7-Safety-X
+# Project 7: Safety X
 
-Forklift simulator to be merged with cybersecurity awareness game.
+A dual-game experience that educates about the importance of cybersecurity awarness in the workspace and the balance of safety and efficiency when operating a forklift.
 
--------------------------------------
-
+-----
 
 Forklift sim to-do list:
+-----
+Key:  
+x&nbsp;&nbsp;&nbsp;&nbsp;Not Started  
+~&nbsp;&nbsp;&nbsp;&nbsp;Ongoing  
+^&nbsp;&nbsp;&nbsp;&nbsp;Completed  
 
-Key:
-x Not Started
-~ Ongoing
-^ Completed
+^&nbsp;&nbsp;&nbsp;&nbsp;Add camera position switching  
+~&nbsp;&nbsp;&nbsp;&nbsp;Build warehouse environment  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Add interior decoration  
+^&nbsp;&nbsp;&nbsp;&nbsp;Link main hub to both games  
+^&nbsp;&nbsp;&nbsp;&nbsp;Fix engine audio  
+^&nbsp;&nbsp;&nbsp;&nbsp;Fix pallette stacking  
+^&nbsp;&nbsp;&nbsp;&nbsp;Add pause menu  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add forklift UI (speedometer, fork raise %)  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add background audio  
+^&nbsp;&nbsp;&nbsp;&nbsp;Add goal  
+x&nbsp;&nbsp;&nbsp;&nbsp;Animate steering wheel  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add timer to run against  
 
---------------------
+-----
 
-^ Add camera position switching
+Cybersecurity to-do list:
+-----
+Key:  
+x&nbsp;&nbsp;&nbsp;&nbsp;Not Started  
+~&nbsp;&nbsp;&nbsp;&nbsp;Ongoing  
+^&nbsp;&nbsp;&nbsp;&nbsp;Completed  
 
-~ Build warehouse environment
-    * Add interior decoration
-
-~ Link main hub to both games
-    * Forklift sim linked, need to merge cyber awareness first
-
-^ Fix engine audio
-
-^ Fix pallette stacking
-
-^ Add pause menu
-
-x Add forklift UI (speedometer, fork raise %)
-
-x Add background audio
-
-^ Add goal
-
-x Animate steering wheel
-
-x Add timer to run against
+^&nbsp;&nbsp;&nbsp;&nbsp;Add pause menu  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add email UI  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add browser UI  
+x&nbsp;&nbsp;&nbsp;&nbsp;Add first day emails  
